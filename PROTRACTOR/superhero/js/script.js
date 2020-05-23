@@ -3,10 +3,17 @@ $("#addHero-form").submit(function (event) {
 
     if ($("#heroInput").val() == "") {
         $("#addHero-Alert").removeClass("hide")
-        $("#addHero-Alert").text("You didn't enter anything!")
-    } else {
+        $("#addHero-Alert").text("You must enter a hero name to submit")
+    } else{
         $("#hero-list").append("<li class='list-group-item'>" + $("#heroInput").val() + "</li>")
         $("#heroInput").val("")
+        if($("#hero-list").children("li").length>8){
+
+            $("#hero-list li").last().remove()
+            $("#heroInput").val("")
+            $("#addHero-Alert").removeClass("hide")
+            $("#addHero-Alert").text("You can only add a maximum of three heros to the roster")
+        }
     }
 
     event.preventDefault();
