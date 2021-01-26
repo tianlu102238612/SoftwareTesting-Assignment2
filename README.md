@@ -15,11 +15,13 @@
   •	Start up a Selenium Server to control local browsers
   
       Run command: webdriver-manager start
+      
+      
   
  * Run
  
-  •	Run the conf.js file in terminal under the test file directory
+    •	Run the conf.js file in terminal under the test file directory
   
-      Run command: protractor conf.js
+        Run command: protractor conf.js
 
 
